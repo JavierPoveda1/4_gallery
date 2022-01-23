@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine español</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sitio web/style/style.css">
+  <style>/* GENERAL*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+    }
+    html{font-size: 32;}
+    
+    img{
+        width: 100%;
+        height: auto;
+    }
+    :root{
+        --azul:#14213D;
+        --amarillo:#FCA311;
+        --gris:#E5E5E5;
+        --blanco:#FFFFFF;
+        --negro:#000000;
+        --oswald:'Oswald', sans-serif;
+        --lora:'Lora', serif;  
+    }
+    
+    section{
+        height: 100%;
+        padding:20px;   
+    }
+    
+    h1 {
+        font-family:var(--oswald);
+        font-size: 100px;
+        font-weight: 400;
+        color: var(--blanco);
+    }
+    
+    h3{
+        font-family: var(--oswald);
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--amarillo);
+    }
+    
+    
+    h2{
+        font-size: 20px;
+        font-family:var(--lora);
+        font-weight: 200;
+        color:var(--blanco);
+    }
+    
+    h4{
+        font-family: var(--lora);
+        color:var(--negro);
+        font-size: 15px;
+    }
+    
+    /*CABECERA*/
+    
+    body>header .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color:var(--amarillo);
+        height: 100vh;
+        flex-grow: 1;
+    }
+    
+    /*nav*/
+    a {
+        text-decoration: none;
+        margin: 20px;
+        color: var(--blanco);
+        font-family: var(--oswald);
+        font-size: 40px;  
+        font-weight: 200;  
+    }
+    
+    a:visited {
+        text-decoration: none;
+    
+    }
+    
+    a:hover {
+        color: #000000;
+    }
+    
+    
+    /*PORTADAS PELÍCULAS*/
+    
+    #peliculas{
+        background-color:var(--gris);
+    }
+    
+    #peliculas .container {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;           
+    }
+    
+    #portadas .container h3{
+        font-family: var(--oswald);
+        font-size: 30px;
+        color:var(--amarillo);
+    }
+    
+    .portadas{
+        padding: 1.2em;
+            margin: 0.5em ;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 250px;
+            flex-grow: 1;
+            background-color: var(--blanco);
+    }
+    
+    .portada_img{
+        display:flex;
+        flex-grow: 1;
+        width: 100%;
+        height: auto;
+    }
+    
+    .portadas_img img{
+        flex-grow: 1;
+        object-fit: cover;
+        object-position: top;
+    }
+    
+    .portadas header{
+        width: 100%;
+        margin: 1em 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .portadas header h4{
+        font-family: var(--lora);
+        font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;           
+    }
+    /*DIRECTORES*/
+    
+    #directores{
+        background-color:var(--gris);
+    }
+    
+    #directores .container{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+    
+    #directores .container h3{
+        font-family: var(--oswald);
+        font-size: 30px;
+        color:var(--amarillo);
+     }   
+    
+     .people{
+        display:flex;
+        flex-direction: column;
+        width: 300px;
+        height: 350px;
+        margin: 1em;
+        padding: 1em;
+        align-items:center;
+        box-shadow: var(--amarillo) 0px 0px 10px ;
+    }
+    
+    .people_img{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .people_img img{
+        border-radius: 200px;
+        object-fit: cover;
+        height: 100%;
+    }
+    
+    .people header h4, blockquote{
+        text-align: center;
+        margin:1em;
+    }
+    
+    /*FOOTER*/
+    
+    #redes{
+        background-color: var(--amarillo);
+    }
+    
+    #redes .container{
+        display: flex;
+    }
+    
+    footer{
+        height: 20vh;
+        padding:30px;
+    }
+    
+    footer p a{
+        font-size: 30px;
+    }
+    
+    
+    footer h3 {
+        color: var(--blanco);
+    }</style> 
+</head>
+
+<body>
+ <header>
+     <div class="container">
+         
+        <h1>Cine español</h1>
+        <h2>
+            Colección portadas de películas de directores españoles
+
+        </h2>
+        <nav>
+        
+         <a href="#peliculas">Películas</a>
+         <a href="#directores">Directores</a>
+         <a href="#redes">Redes sociales</a>
+         
+     </nav>
+    </div>
+</header>
+    <main>
+        <section id="peliculas">
+            <h3>Películas</h3>
+            <div class="container">
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/campeones.jpg" alt="">
+                </div>
+                <header>
+                    <h4>Campeones </h4>
+                </header>
+                </div>
+
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/elcover.jpg" alt="">
+                </div>
+                <header>
+                    <h4>El cover</h4>
+                </header>
+                </div>
+
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/elhoyo.jpg" alt="">
+                </div>
+                <header>
+                    <h4>El hoyo</h4>
+                </header>
+                </div>
+
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/historiaslamentables.jpg" alt="">
+                </div>
+                <header>
+                    <h4>Historias lamentables</h4>
+                </header>
+                </div>
+
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/karma.jpg" alt="">
+                </div>
+                <header>
+                    <h4>No culpes al karma</h4>
+                </header>
+                </div>
+
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/loimposiblejpg.jpg" alt="">
+                </div>
+                <header>
+                    <h4>Lo imposible</h4>
+                </header>
+                 </div>
+
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/malasaña.jpg" alt="">
+                </div>
+                <header>
+                    <h4>Malasaña 32</h4>
+                </header>
+                </div>
+
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/palmerasenlanieve.jpg" alt="">
+                </div>
+                <header>
+                    <h4>Palmeras en la nieve</h4>
+                </header>
+                </div>
+
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/perfectosdesc.jpg" alt="">
+                </div>
+                <header>
+                    <h4>Perfectos desconocidos</h4>
+                </header>
+                </div>
+
+                <div class="portadas">
+                <div class="portada_img">
+                    <img src="sitio web/img/pelis/unmonstruo.jpg" alt="">
+                </div>
+                <header>
+                    <h4>Un monstruo viene a verme</h4>
+                </header>
+                </div>
+        </div>
+        </section>
+
+        <section id="directores">
+            <h3>Directores</h3>
+            <div class="container">
+                <div class="people">
+                    <div class="people_img">
+                        <img src="sitio web/img/directores/javierfresser.jpg" alt="">
+                    </div>
+                    <header>
+                        <h4>Javier Fresser</h4>
+                        <blockquote>
+                            “A mí me gusta ganar siempre.”
+                        </blockquote>
+                    </header>
+                    
+                </div>
+
+                <div class="people">
+                    <div class="people_img">
+                        <img src="sitio web/img/directores/maria_ripoll.jpg" alt="">
+                    </div>
+                    <header>
+                        <h4>María Ripoll</h4>
+                        <blockquote>
+                            “Yo creo que algo he tenido que hacer en otra vida para que el karma me lo pague así.”
+                        </blockquote>
+
+                    </header>
+                    
+                </div>
+
+                <div class="people">
+                    <div class="people_img">
+                        <img src="sitio web/img/directores/fernando.jpg" alt="">
+                    </div>
+                    <header>
+                        <h4>Fernando González</h4>
+                        <blockquote>
+                            “Uno nunca olvida el lugar que le vio nacer”
+                        </blockquote>
+                    </header>
+                    
+                </div>
+            </div>
+        </section>   
+    </main>
+    <footer id="redes">
+        <h3>Redes sociales</h3>
+        <div class="container">
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Email</a></p>
+         </div>
+    </footer>
+</body>
+</html>
